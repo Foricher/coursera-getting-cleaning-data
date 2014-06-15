@@ -1,4 +1,13 @@
 
+##The activity numbers and corresponding names are:
+* 1 - WALKING
+* 2 - WALKING_UPSTAIRS
+* 3 - WALKING_DOWNSTAIRS
+* 4 - SITTING
+* 5 - STANDING
+* 6 - LAYING
+
+##the only means and standard deviations included are:
 
 
 [1] "subject"                  "activity"                 "tBodyAccMeanX"           
