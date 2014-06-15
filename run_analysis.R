@@ -38,19 +38,15 @@ message("Step2. Extracts only the measurements on the mean and standard  deviati
 features <- read.table(get_file(data_dir,"features.txt"))
 mean_std_selected <- grep("mean\\(\\)|std\\(\\)", features[, 2])
 all_data <- all_data[, mean_std_selected]
+# clean column names
 names(all_data) <- features[mean_std_selected, 2]
-names(all_data) <- gsub("mean", "Mean", names(all_data)) # capitalize M
-names(all_data) <- gsub("std", "Std", names(all_data)) # capitalize S
-names(all_data) <- gsub("-", "", names(all_data)) # remove "-" in column names 
-names(all_data) <- gsub("\\(\\)", "", names(all_data) ) # delete "()"
+names(all_data) <- gsub("mean", "Mean", names(all_data)) 
+names(all_data) <- gsub("std", "Std", names(all_data))
+names(all_data) <- gsub("-", "", names(all_data))  
+names(all_data) <- gsub("\\(\\)", "", names(all_data) )
 
 message("Step3. Uses descriptive activity names to name the activities in  the data set.")
 activity_labels <- read.table(get_file(data_dir,"activity_labels.txt"))
-#all_labels$activity <- factor(activity_labels$V1,levels = 1:6,labels = activity_labels$V2)
-#activity_labels[, 2] <- tolower(gsub("_", "", activity_labels[, 2]))
-#substr(activity[2, 2], 8, 8) <- toupper(substr(activity[2, 2], 8, 8))
-#substr(activity[3, 2], 8, 8) <- toupper(substr(activity[3, 2], 8, 8))
-#activity_labels <- activity_labels[all_labels[, 1], 2]
 all_labels[, 1] <- activity_labels[all_labels[, 1], 2]
 names(all_labels) <- "activity"
 
