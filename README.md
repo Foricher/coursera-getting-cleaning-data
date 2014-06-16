@@ -8,7 +8,7 @@ This file describes how run_analysis.R script works.
 * You will find two output files are generated in the current working directory:
   - clean_data.txt (7.96 Mb): it contains a data frame  with 10299*68 dimension.
   - tidy_data_means.txt (219 Kb): it contains a data frame with 180*68 dimension.
-
+* A code book that describes the variables, the data, and any transformations and work performed to clean up the data 
 
 
 
