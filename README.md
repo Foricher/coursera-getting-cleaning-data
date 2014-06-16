@@ -3,7 +3,8 @@ coursera-getting-cleaning-data
  
 This file describes how run_analysis.R script works.
 * First, unzip the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-* Make sure the folder "UCI HAR Dataset" and the run_analysis.R script are both in the current working directory : setwd("current working directory"), 
+* Make sure the folder "UCI HAR Dataset" and the run_analysis.R script are both in the current working directory 
+* Set the current directory : setwd("current working directory") 
 * Install package plyr :  install.packages("plyr")
 * Use source("run_nalysis.R") command in RStudio. 
 * You will find two output files are generated in the current working directory:
