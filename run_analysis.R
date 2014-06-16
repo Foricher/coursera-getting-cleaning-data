@@ -6,14 +6,14 @@ get_file <- function(base_dir, path) {
     paste(base_dir,path ,sep="/")
 }
 
-download_data = function(to_dir) {
+download_data <- function(to_dir) {
     if (!file.exists(to_dir)) {
         # download the data
         fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
         zipfile="UCI_HAR_data.zip"
         message("Download data")
         download.file(fileURL, destfile=zipfile, method="curl")
-        message(paste("Create directory",to_dir,sep=" "))
+        message("Create directory :",to_dir)
         dir.create(to_dir)
         unzip(zipfile)
     }
@@ -54,12 +54,12 @@ message("Step4. Appropriately labels the data set with descriptive activity name
 names(all_subjects) <- "subject"
 clean_data <- cbind(all_subjects, all_labels, all_data)
 dim(clean_data) # 10299*68
-write.table(clean_data, "clean_data.txt") # write out the 1st dataset
+write.table(clean_data, "clean_data.txt") # write out clean_data dataset
 
 message("Step 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.") 
-#library(reshape2)
+library(plyr)
+tidy_data <- ddply(clean_data , .(subject, activity), function(x) colMeans(x[,3:ncol(clean_data)]))
+#library(reshape2) alternative
 #melt_data <- melt(clean_data, id = c("subject", "activity"))
 #tidy_data <- dcast(melt_data, subject + activity ~ variable, mean)
-library(plyr)
-tidy_data <- ddply(clean_data , .(subject, activity), function(x) colMeans(x[,3:length(clean_data)]))
 write.table(tidy_data, "tidy_data_means.txt") 
