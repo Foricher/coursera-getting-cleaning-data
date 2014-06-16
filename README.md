@@ -6,7 +6,7 @@ This file describes how run_analysis.R script works.
 * Make sure the folder "UCI HAR Dataset" and the run_analysis.R script are both in the current working directory 
 * Set the current directory : setwd("current working directory") 
 * Install package plyr :  install.packages("plyr")
-* Use source("run_nalysis.R") command in RStudio. 
+* Use source("run_analysis.R") command in RStudio. 
 * You will find two output files are generated in the current working directory:
   - clean_data.txt (7.96 Mb): it contains a data frame  with 10299*68 dimension.
   - tidy_data_means.txt (219 Kb): it contains a data frame with 180*68 dimension.
