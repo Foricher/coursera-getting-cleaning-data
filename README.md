@@ -12,3 +12,11 @@ This file describes how run_analysis.R script works.
 
 
 
+#### Short description of script run_analysis.R 
+
+1. Merges the training and test datasets
+2. Extracts key features (those having mean() and std())
+3. Appropriately name columns
+4. Adds an activity column to describe the activity (stored in variable data_set)
+5. A tidy data set is created that reports the mean grouped by subject and activity
+6. Stored in variable tidyData and file downloaded to "meansDataSet.txt"
