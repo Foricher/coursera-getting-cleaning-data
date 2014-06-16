@@ -1,4 +1,29 @@
 
+This file  describes in detail all the transformations made to the data and the explanation of variables.
+
+Data source is : http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+# Files Used
+1. X_train.txt (contains values of all the features)
+2. Y_train.txt (activity code for user activity e.g. walking, standing etc)
+3. subject_train.txt (subject id of user)
+4. X_test.txt
+5. Y_test.txt
+6. subject_test.txt
+7. features.txt (names of all the features)
+8. activity_labels.txt (activity names for corresponding activity codes)
+
+# Transformations
+1. X, Y and subject data are combined to get one large data set (stored in all_data)
+2. From the features table, features with mean() or std() are kept (meanFreq were omitted). There are 66 features in total.
+3. The columns are labeled with the activity names in activity_labels. the columns names are renamed to be cleaner (ex: tBodyAccMeanY for  tBodyAcc-mean()-Y).
+4. Two columns  are prepend to the dataset clean_data
+   - subject : subect identiifer
+   - activity : Activities performed by the subjects.
+5. Average of each feature by subject and activity is stored in a new data set called tidy_data. 
+6. tidy_data is written to "tidy_data_means.txt"
+
+
 ##The activity numbers and corresponding names are:
 * 1 - WALKING
 * 2 - WALKING_UPSTAIRS
@@ -8,28 +33,71 @@
 * 6 - LAYING
 
 ##the only means and standard deviations included are:
-
-
-[1] "subject"                  "activity"                 "tBodyAccMeanX"           
- [4] "tBodyAccMeanY"            "tBodyAccMeanZ"            "tBodyAccStdX"            
- [7] "tBodyAccStdY"             "tBodyAccStdZ"             "tGravityAccMeanX"        
-[10] "tGravityAccMeanY"         "tGravityAccMeanZ"         "tGravityAccStdX"         
-[13] "tGravityAccStdY"          "tGravityAccStdZ"          "tBodyAccJerkMeanX"       
-[16] "tBodyAccJerkMeanY"        "tBodyAccJerkMeanZ"        "tBodyAccJerkStdX"        
-[19] "tBodyAccJerkStdY"         "tBodyAccJerkStdZ"         "tBodyGyroMeanX"          
-[22] "tBodyGyroMeanY"           "tBodyGyroMeanZ"           "tBodyGyroStdX"           
-[25] "tBodyGyroStdY"            "tBodyGyroStdZ"            "tBodyGyroJerkMeanX"      
-[28] "tBodyGyroJerkMeanY"       "tBodyGyroJerkMeanZ"       "tBodyGyroJerkStdX"       
-[31] "tBodyGyroJerkStdY"        "tBodyGyroJerkStdZ"        "tBodyAccMagMean"         
-[34] "tBodyAccMagStd"           "tGravityAccMagMean"       "tGravityAccMagStd"       
-[37] "tBodyAccJerkMagMean"      "tBodyAccJerkMagStd"       "tBodyGyroMagMean"        
-[40] "tBodyGyroMagStd"          "tBodyGyroJerkMagMean"     "tBodyGyroJerkMagStd"     
-[43] "fBodyAccMeanX"            "fBodyAccMeanY"            "fBodyAccMeanZ"           
-[46] "fBodyAccStdX"             "fBodyAccStdY"             "fBodyAccStdZ"            
-[49] "fBodyAccJerkMeanX"        "fBodyAccJerkMeanY"        "fBodyAccJerkMeanZ"       
-[52] "fBodyAccJerkStdX"         "fBodyAccJerkStdY"         "fBodyAccJerkStdZ"        
-[55] "fBodyGyroMeanX"           "fBodyGyroMeanY"           "fBodyGyroMeanZ"          
-[58] "fBodyGyroStdX"            "fBodyGyroStdY"            "fBodyGyroStdZ"           
-[61] "fBodyAccMagMean"          "fBodyAccMagStd"           "fBodyBodyAccJerkMagMean" 
-[64] "fBodyBodyAccJerkMagStd"   "fBodyBodyGyroMagMean"     "fBodyBodyGyroMagStd"     
-[67] "fBodyBodyGyroJerkMagMean" "fBodyBodyGyroJerkMagStd" 
+"subject"                  
+"activity"
+"tBodyAccMeanX"           
+"tBodyAccMeanY"
+"tBodyAccMeanZ"
+"tBodyAccStdX"            
+"tBodyAccStdY"
+"tBodyAccStdZ"
+"tGravityAccMeanX"
+"tGravityAccMeanY"
+"tGravityAccMeanZ"
+"tGravityAccStdX"         
+"tGravityAccStdY"
+"tGravityAccStdZ"
+"tBodyAccJerkMeanX"       
+"tBodyAccJerkMeanY"
+"tBodyAccJerkMeanZ"
+"tBodyAccJerkStdX"        
+"tBodyAccJerkStdY"
+"tBodyAccJerkStdZ"
+"tBodyGyroMeanX"          
+"tBodyGyroMeanY"
+"tBodyGyroMeanZ"
+"tBodyGyroStdX"           
+"tBodyGyroStdY"
+"tBodyGyroStdZ"
+"tBodyGyroJerkMeanX"
+"tBodyGyroJerkMeanY"
+"tBodyGyroJerkMeanZ"
+"tBodyGyroJerkStdX"       
+"tBodyGyroJerkStdY"
+"tBodyGyroJerkStdZ"
+"tBodyAccMagMean"         
+"tBodyAccMagStd"
+"tGravityAccMagMean" 
+"tGravityAccMagStd"       
+"tBodyAccJerkMagMean" 
+"tBodyAccJerkMagStd"
+"tBodyGyroMagMean"        
+"tBodyGyroMagStd"
+"tBodyGyroJerkMagMean" 
+"tBodyGyroJerkMagStd"     
+"fBodyAccMeanX"
+"fBodyAccMeanY" 
+"fBodyAccMeanZ"           
+"fBodyAccStdX" 
+"fBodyAccStdY"      
+"fBodyAccStdZ"            
+"fBodyAccJerkMeanX"  
+"fBodyAccJerkMeanY" 
+"fBodyAccJerkMeanZ"       
+"fBodyAccJerkStdX"   
+"fBodyAccJerkStdY"   
+"fBodyAccJerkStdZ"        
+"fBodyGyroMeanX"    
+"fBodyGyroMeanY"     
+"fBodyGyroMeanZ"          
+"fBodyGyroStdX"    
+"fBodyGyroStdY"     
+"fBodyGyroStdZ"           
+"fBodyAccMagMean"    
+"fBodyAccMagStd"     
+"fBodyBodyAccJerkMagMean" 
+"fBodyBodyAccJerkMagStd"  
+"fBodyBodyGyroMagMean"   
+"fBodyBodyGyroMagStd"     
+"fBodyBodyGyroJerkMagMean"
+"fBodyBodyGyroJerkMagStd" 
