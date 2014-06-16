@@ -1,7 +1,12 @@
 
+
+The data comes from "Human Activity Recognition Using Smartphones Data Set"
+see http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+
 This file  describes in detail all the transformations made to the data and the explanation of variables.
 
-Data source is : http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+Data source url is : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 # Files used from the data source
 1. X_train.txt (contains values of all the features)
