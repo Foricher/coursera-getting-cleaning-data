@@ -59,7 +59,14 @@ write.table(clean_data, "clean_data.txt") # write out clean_data dataset
 message("Step 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.") 
 library(plyr)
 tidy_data <- ddply(clean_data , .(subject, activity), function(x) colMeans(x[,3:ncol(clean_data)]))
+#alternative 1
 #library(reshape2) alternative
 #melt_data <- melt(clean_data, id = c("subject", "activity"))
 #tidy_data <- dcast(melt_data, subject + activity ~ variable, mean)
+#alternative 2
+#mydata1 = aggregate(clean_data[, c(3:ncol(clean_data))], by = list(clean_data[,1], clean_data[,2]), mean)
+#colnames(mydata1)[1] <- "activity"
+#colnames(mydata1)[2] <- "subject"
 write.table(tidy_data, "tidy_data_means.txt") 
+
+#tidy_data2 <- aggregate(clean_data,by=list(clean_data$subject, clean_data$activity), FUN=mean, na.rm=TRUE)
