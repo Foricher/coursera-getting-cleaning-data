@@ -29,7 +29,7 @@ Data source url is : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfile
 6. tidy_data is written to "tidy_data_means.txt"
 
 
-##The activity numbers and corresponding names are:
+##The activities names are:
 * 1 - WALKING
 * 2 - WALKING_UPSTAIRS
 * 3 - WALKING_DOWNSTAIRS
@@ -37,72 +37,113 @@ Data source url is : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfile
 * 5 - STANDING
 * 6 - LAYING
 
-##the only means and standard deviations included are:
-- "subject"                  
+##Dataset columns names :
+Only means and standard deviations are included
+Subject Identifier
+- "subject"
+
+Activity Name
 - "activity"
+
+######Time Domain
+Body acceleration signals X, Y, Z components; mean and standard deviation.
 - "tBodyAccMeanX"           
 - "tBodyAccMeanY"
 - "tBodyAccMeanZ"
 - "tBodyAccStdX"            
 - "tBodyAccStdY"
 - "tBodyAccStdZ"
+
+Gravity acceleration signals X, Y, Z components; mean and standard deviation.
 - "tGravityAccMeanX"
 - "tGravityAccMeanY"
 - "tGravityAccMeanZ"
 - "tGravityAccStdX"         
 - "tGravityAccStdY"
 - "tGravityAccStdZ"
+
+Body acceleration Jerk signals X, Y, Z components; mean and standard deviation.
 - "tBodyAccJerkMeanX"       
 - "tBodyAccJerkMeanY"
 - "tBodyAccJerkMeanZ"
 - "tBodyAccJerkStdX"        
 - "tBodyAccJerkStdY"
 - "tBodyAccJerkStdZ"
+
+Body gyroscope signals X, Y, Z components; mean and standard deviation.
 - "tBodyGyroMeanX"          
 - "tBodyGyroMeanY"
 - "tBodyGyroMeanZ"
 - "tBodyGyroStdX"           
 - "tBodyGyroStdY"
 - "tBodyGyroStdZ"
+
+Body gyroscope Jerk signals X, Y, Z components; mean and standard deviation.
 - "tBodyGyroJerkMeanX"
 - "tBodyGyroJerkMeanY"
 - "tBodyGyroJerkMeanZ"
 - "tBodyGyroJerkStdX"       
 - "tBodyGyroJerkStdY"
 - "tBodyGyroJerkStdZ"
+
+Body linear acceleration magnitude; mean and standard deviation.
 - "tBodyAccMagMean"         
 - "tBodyAccMagStd"
+
+Gravity acceleration magnitude; mean and standard deviation.
 - "tGravityAccMagMean" 
-- "tGravityAccMagStd"       
+- "tGravityAccMagStd"  
+
+Body acceleration Jerk magnitude; mean and standard deviati
 - "tBodyAccJerkMagMean" 
 - "tBodyAccJerkMagStd"
+
+Body gyroscope magnitude; mean and standard deviation.
 - "tBodyGyroMagMean"        
 - "tBodyGyroMagStd"
+
+Body gyroscope Jerk magnitude; mean and standard deviation.
 - "tBodyGyroJerkMagMean" 
-- "tBodyGyroJerkMagStd"     
+- "tBodyGyroJerkMagStd"
+
+######Frequency Domain
+
+Body linear acceleration X, Y, Z components; mean and standard deviation
 - "fBodyAccMeanX"
 - "fBodyAccMeanY" 
 - "fBodyAccMeanZ"           
 - "fBodyAccStdX" 
 - "fBodyAccStdY"      
-- "fBodyAccStdZ"            
+- "fBodyAccStdZ" 
+
+Body linear acceleration Jerk X, Y, Z components; mean and standard deviation.
 - "fBodyAccJerkMeanX"  
 - "fBodyAccJerkMeanY" 
 - "fBodyAccJerkMeanZ"       
 - "fBodyAccJerkStdX"   
 - "fBodyAccJerkStdY"   
-- "fBodyAccJerkStdZ"        
+- "fBodyAccJerkStdZ" 
+
+Body gyroscope signals X, Y, Z components; mean and standard deviation.
 - "fBodyGyroMeanX"    
 - "fBodyGyroMeanY"     
 - "fBodyGyroMeanZ"          
 - "fBodyGyroStdX"    
 - "fBodyGyroStdY"     
-- "fBodyGyroStdZ"           
+- "fBodyGyroStdZ" 
+
+Body linear acceleration magnitude; mean and standard deviation.
 - "fBodyAccMagMean"    
-- "fBodyAccMagStd"     
+- "fBodyAccMagStd"   
+
+Body linear acceleration Jerk magnitude; mean and standard deviation.
 - "fBodyBodyAccJerkMagMean" 
-- "fBodyBodyAccJerkMagStd"  
+- "fBodyBodyAccJerkMagStd" 
+
+Body gyroscope magnitude; mean and standard deviation.
 - "fBodyBodyGyroMagMean"   
-- "fBodyBodyGyroMagStd"     
+- "fBodyBodyGyroMagStd"
+
+Body gyroscope Jerk magnitude; mean and standard deviation.
 - "fBodyBodyGyroJerkMagMean"
 - "fBodyBodyGyroJerkMagStd" 
