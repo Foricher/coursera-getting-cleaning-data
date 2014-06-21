@@ -38,7 +38,9 @@ Data source url is : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfile
 * 6 - LAYING
 
 ##Dataset columns names :
+
 Only means and standard deviations are included
+
 Subject Identifier
 - "subject"
 
